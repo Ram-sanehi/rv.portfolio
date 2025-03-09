@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364),
+                radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);
+    background-blend-mode: overlay;
+    color: #fff;
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(90deg, #011F26, #03484A);
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+footer {
+    background: linear-gradient(90deg, #011F26, #03484A);
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.visitor-counter {
+    position: absolute;
+    right: 15px;
+}
+  
+#visitor-counter {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 30px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #6e6c6c;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+#home, #about, #services, #portfolio, #feedback, #contact {
+    text-align: center;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.home-container, .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+    min-height: 0;
+}
+
+.home-content, .about-content {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.home-content p, .about-content p {
+    text-align: justify;
+}
+
+#home .profile-pic {
+    width: 30vw;
+    max-width: 380px;
+    height: auto;
+    border-radius: 170px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#about .profile-pic {
+    width: 28vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#home .profile-pic:hover, #about .profile-pic:hover {
+    transform: rotate3d(1, 1, 0, 10deg) scale(0.96);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #017374;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #023133;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#services .card, #portfolio .card {
+    display: inline-block;
+    width: 42%;
+    min-height: 170px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    background: linear-gradient(135deg, #045D5D, #017374);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#services .card:hover, #portfolio .card:hover {
+    transform: translate(5px, -5px);
+    box-shadow: 5px 18px 30px rgba(0, 0, 0, 0.35);
+}
+
+#portfolio .card img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#feedback .feedback-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+#feedback .feedback-item {
+    background: linear-gradient(135deg, #045D5D, #017374);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#feedback .feedback-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#feedback .feedback-item i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#feedback .feedback-item p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 27px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.vertical-text {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 30px;
+    color: #eee7e7;
+    text-align: center;
+    margin-left: 30px;
+    letter-spacing: 0px;
+    animation: blink 1s infinite; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.vertical-text:hover {
+    transform: scale(1.1); 
+    color: #023133; 
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+#about a {
+    color: black; 
+    text-decoration: none;
+}
+
+#about a:hover {
+    color: #023133;
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 5px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #224f67; 
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #215152;
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin; 
+    scrollbar-color: #017374 #224f67; 
+  }
+  
+@media (max-width: 1024px) {
+    .home-container, .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content, .about-content {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .home-content p, .about-content p {
+        text-align: center;
+    }
+
+    #home .profile-pic, #about .profile-pic {
+        width: 50vw;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    #services .card, #portfolio .card {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 15px;
+    }
+
+    #feedback .feedback-item {
+        width: 180px;
+    }
+
+    .vertical-text {
+        font-size: 24px;
+        left: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    #home .profile-pic, #about .profile-pic {
+        width: 60vw;
+        max-width: 250px;
+    }
+
+    #services .card, #portfolio .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .home-content, .about-content {
+        font-size: 16px;
+    }
+
+    .vertical-text {
+        font-size: 20px;
+        left: 5px;
+    }
+
+    #feedback .feedback-item {
+        width: 150px;
+        padding: 15px;
+    }
+
+    #feedback .feedback-item i {
+        font-size: 25px;
+    }
+
+    #feedback .feedback-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home, #about, #services, #portfolio, #feedback, #contact {
+        padding: 40px 10px;
+    }
+
+    #home .profile-pic, #about .profile-pic {
+        width: 70vw;
+        max-width: 200px;
+    }
+
+    nav ul li {
+        margin: 8px 10px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #feedback .feedback-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #feedback .feedback-item {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .vertical-text {
+        font-size: 18px;
+        left: 5px;
+    }
+}
