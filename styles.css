@@ -257,7 +257,7 @@ button:active {
     text-align: center;
     margin-left: 30px;
     letter-spacing: 0px;
-    animation: blink 1s infinite; 
+    animation: blink 2s infinite; 
     transition: transform 0.3s ease, color 0.3s ease; 
 }
 
